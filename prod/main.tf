@@ -1,9 +1,4 @@
 terraform {
-  backend "s3" {
-    bucket = "igor-network-tfstate"
-    key    = "prod/terraform.tfstate"
-    region = "us-east-1"
-  }
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -17,7 +12,7 @@ provider "aws" {
     default_tags {
         tags = {
             Owner   = "Igor Rossetti"
-            Env     = "Prod"
+            Env     = "Producao"
             Class   = "CLC10"
         }
     }
